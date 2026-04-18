@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sales Outlets | Mwanyi Terimba Ltd</title>
+    <meta
+      name="description"
+      content="Find Mwanyi Terimba Ltd sales outlets and stockists across Kampala, Wakiso, Mukono, Masaka, and other locations."
+    />
+    <meta name="theme-color" content="#2c180f" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      window.OUTLETS_DATA = [
+        { id: 1, name: "Buganda Heritage and Tourism Board", location: "Bulange (Mengo)", contact: "0703707405" },
+        { id: 2, name: "Muganzirwazza Commercial Complex", location: "Katwe (Kampala)", contact: "0742785066" },
+        { id: 3, name: "Namanve Processing plant and store", location: "Namanve", contact: "0762261955" },
+        { id: 4, name: "Bahinda Supermarket", location: "Nakasero", contact: "0703937285" },
+        { id: 5, name: "Shami Supermarket", location: "Wakiso", contact: "0781899047" },
+        { id: 6, name: "Hanifah Shoppers", location: "Nsangi", contact: "0758684261" },
+        { id: 7, name: "Hajji and Hajji Supermarket", location: "Kyengera", contact: "0782588207" },
+        { id: 8, name: "Smart Supermarket", location: "Busega", contact: "0756657282" },
+        { id: 9, name: "Armright Supermarket", location: "Mengo", contact: "0704278701" },
+        { id: 10, name: "Fabulous Freeman Hyper Market", location: "New Taxi Park (Kampala)", contact: "0708223323" },
+        { id: 11, name: "Smart Mini Supermarket", location: "Mukono", contact: "0782647790" },
+        { id: 12, name: "Ssentongo Supermarket", location: "Luzira", contact: "0753632316" },
+        { id: 13, name: "Senana Hypermarket", location: "Buganda Road (Kampala)", contact: "" },
+        { id: 14, name: "Stabex Namasuba", location: "Namasuba", contact: "" },
+        { id: 15, name: "Kyagwe Supermarket", location: "Mukono", contact: "0705303646" },
+        { id: 16, name: "God's Plan Supermarket", location: "Makindye", contact: "" },
+        { id: 17, name: "Vintage Supermarket", location: "Namasuba", contact: "" },
+        { id: 18, name: "Esay Halaal Supermarket", location: "Namasuba", contact: "" },
+        { id: 19, name: "Star Select Supermarket", location: "Lubigi", contact: "" },
+        { id: 20, name: "Oryx Supermarket", location: "Lutete", contact: "0755739014" },
+        { id: 21, name: "Total spermarket", location: "Kyengera", contact: "" },
+        { id: 22, name: "Kirimanyi Timothy", location: "Wobulenzi Town", contact: "0700551217" },
+        { id: 23, name: "Butale Traders", location: "Nyendo (Masaka)", contact: "0752256060" },
+        { id: 24, name: "Lugala Traders", location: "Lugala (Lubaga)", contact: "0709926610" },
+        { id: 25, name: "New Karamoja", location: "Nyendo (Masaka)", contact: "0751615965" },
+        { id: 26, name: "Mukisa Shop", location: "Kansanga", contact: "0751456774" },
+        { id: 27, name: "Eyob Shop", location: "Kansanga", contact: "0759931002" },
+        { id: 28, name: "Olumpia Hostel Shop", location: "Makerere", contact: "" },
+        { id: 29, name: "Nana Hostel", location: "Makerere", contact: "" },
+        { id: 30, name: "St Joseph's Hospital", location: "Wakiso", contact: "0703522004" },
+        { id: 31, name: "Loyz Coffee Shop", location: "Wakiso", contact: "0743039144" },
+        { id: 32, name: "Buganda Royal Institute - Kapeeka", location: "Mengo", contact: "0753108521" },
+        { id: 33, name: "St. Mark's College - Namagoma", location: "Namagoma", contact: "0701318815" },
+        { id: 34, name: "Lubiri High School - Mengo", location: "Mengo", contact: "0414272235" },
+        { id: 35, name: "Bbale S.S", location: "Kayunga", contact: "0708301400" },
+        { id: 36, name: "St Lawrence University", location: "Lubaga", contact: "" },
+        { id: 37, name: "Nambejja Rose", location: "Nateete Market", contact: "0758573615" },
+        { id: 38, name: "Kabugo Martin", location: "Grand Corner (Kampala)", contact: "0705346083" },
+        { id: 39, name: "Sserwanja Godfrey", location: "Masuliita Town", contact: "0701307200" },
+        { id: 40, name: "Hajji Dirisa", location: "Kaddugala (Masaka)", contact: "0759668860" },
+        { id: 41, name: "Kizito Ibrahim", location: "Nyendo (Masaka)", contact: "0753533520" },
+        { id: 42, name: "Katende", location: "Kamengo (Mpigi)", contact: "0700406885" },
+        { id: 43, name: "Chairman", location: "Matuga", contact: "0758666250" },
+        { id: 44, name: "Nantongo Josephine", location: "Kikunyu (Kamengo)", contact: "0777548016" },
+        { id: 45, name: "Namyalo Joice", location: "Kyengera (Wakiso)", contact: "0756405406" },
+        { id: 46, name: "Ssemakula Joseph", location: "Wakiso Town", contact: "0701857757" },
+        { id: 47, name: "Nasozzi Marion", location: "Kikunyu (Kamengo)", contact: "0750464941" },
+        { id: 48, name: "Kabugo Martin", location: "Grand Corner (Kampala)", contact: "0705346083" },
+        { id: 49, name: "Maama Hariet", location: "Kyengera", contact: "0772418846" },
+        { id: 50, name: "Mathias", location: "Masaka", contact: "0706498235" },
+        { id: 51, name: "Stephen", location: "Mukono", contact: "070516169" }
+      ];
+    </script>
+    <script src="script.js" defer></script>
+  </head>
+  <body data-page="outlets">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <p>Opening hours: 08:00 am - 05:00 pm</p>
+        <p>Location: Muganzirwazza Commercial Complex, Katwe</p>
+      </div>
+    </div>
+
+    <header class="site-header" id="site-header">
+      <div class="container nav-shell">
+        <a class="brand" href="index.html" aria-label="Mwanyi Terimba Ltd home">
+          <img
+            src="images/logo/mwanyiterimbalogo.jpg"
+            alt="Mwanyi Terimba Ltd logo"
+            width="56"
+            height="56"
+          />
+          <span>
+            <strong>Mwanyi Terimba Ltd</strong>
+            <small>The Buganda Coffee House</small>
+          </span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Toggle navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+          <a href="index.html" data-nav="home">Home</a>
+          <a href="about.html" data-nav="about">About</a>
+          <a href="blog.html" data-nav="blog">Our Blog</a>
+          <a href="gallery.html" data-nav="gallery">Gallery</a>
+          <a href="outlets.html" data-nav="outlets">Sales Outlets</a>
+        </nav>
+
+        <a class="button button-small button-solid nav-cta" href="index.html#subscription">
+          Join Subscription
+        </a>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="page-hero page-hero--outlets">
+        <div class="page-hero-backdrop" aria-hidden="true"></div>
+        <div class="container page-hero-shell">
+          <p class="eyebrow">Sales Outlets</p>
+          <h1>Search by Name or Location</h1>
+          <p>
+            Explore stockists and Mwanyi Terimba outlet points across Kampala, Wakiso,
+            Mukono, Masaka, and other locations.
+          </p>
+          <div class="breadcrumbs">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <span>Sales Outlets</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container outlets-layout">
+          <div class="section-copy reveal">
+            <p class="eyebrow">Sales Outlets</p>
+            <h2>Find Kaawa Mpologoma near you</h2>
+            <div class="copy-stack">
+              <p>
+                Use the search field to look up a name or location and browse our current
+                network of sales outlets and distribution points.
+              </p>
+              <p>
+                If you need delivery help or a direct pickup point, contact our Katwe
+                office and we'll guide you to the nearest option.
+              </p>
+            </div>
+            <div class="support-grid">
+              <article class="support-card">
+                <h3>Head Office</h3>
+                <p>Muganzirwazza Commercial Complex, Katwe</p>
+              </article>
+              <article class="support-card">
+                <h3>Processing Plant &amp; Store</h3>
+                <p>Namanve processing plant and store</p>
+              </article>
+              <article class="support-card">
+                <h3>Customer Support</h3>
+                <p>+256-742-785066 / +256-762-261955</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="table-panel reveal">
+            <div class="table-controls">
+              <div class="control-group">
+                <label for="outlet-search">Search</label>
+                <input
+                  id="outlet-search"
+                  type="search"
+                  placeholder="Search by name or location"
+                />
+              </div>
+
+              <div class="control-group">
+                <label for="outlet-size">Entries per page</label>
+                <select id="outlet-size">
+                  <option value="8">8</option>
+                  <option value="16" selected>16</option>
+                  <option value="24">24</option>
+                </select>
+              </div>
+            </div>
+
+            <p class="table-status" id="outlets-status">Showing 0 to 0 of 0 entries</p>
+
+            <div class="table-shell">
+              <table class="outlets-table">
+                <thead>
+                  <tr>
+                    <th>No.</th>
+                    <th>Name</th>
+                    <th>Location</th>
+                    <th>Contact</th>
+                  </tr>
+                </thead>
+                <tbody id="outlets-body"></tbody>
+              </table>
+            </div>
+
+            <div class="pagination" id="outlets-pagination" aria-label="Outlet pages"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cta-banner">
+        <div class="container cta-shell reveal">
+          <div>
+            <p class="eyebrow">Experience the ease of getting tasty coffee when you need it.</p>
+            <h2>Interested in a Regular Coffee Delivery?</h2>
+          </div>
+          <div class="cta-actions">
+            <a class="button button-solid" href="index.html#subscription">Join Subscription</a>
+            <a class="button button-outline" href="mailto:sales@mwanyiterimba.com">Contact Us</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-meta">
+          <a class="brand footer-brand" href="index.html">
+            <img
+              src="images/logo/mwanyiterimbalogo.jpg"
+              alt="Mwanyi Terimba Ltd logo"
+              width="56"
+              height="56"
+              loading="lazy"
+              decoding="async"
+            />
+            <span>
+              <strong>Mwanyi Terimba Ltd</strong>
+              <small>The Buganda Coffee House</small>
+            </span>
+          </a>
+          <p class="footer-copy">
+            The Beginning of Mwanyi Terimba Limited was premised on the "Emmwanyi Terimba
+            Campaign" that loosely connotes "Grow more coffee!"
+          </p>
+        </div>
+
+        <div>
+          <h3>Working Hours</h3>
+          <ul class="footer-list">
+            <li>Monday - Friday: 08:00am - 05:00pm</li>
+            <li>Saturday: 08:00am - 12:00pm</li>
+            <li>Sunday: Closed</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contact Us</h3>
+          <ul class="footer-list">
+            <li>Location: Muganzirwazza Commercial Complex, Katwe</li>
+            <li>Email: <a href="mailto:sales@mwanyiterimba.com">sales@mwanyiterimba.com</a></li>
+            <li>
+              Phone Number:
+              <a href="tel:+256742785066">+256-742-785066</a>,
+              <a href="tel:+256762261955">+256-762-261955</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Follow Facebook &amp; Twitter</h3>
+          <div class="social-links" aria-label="Social media links">
+            <a href="https://facebook.com" target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M14 8h3V4h-3c-3 0-5 2-5 5v3H6v4h3v4h4v-4h3.2l.8-4H13V9c0-.6.4-1 1-1Z" />
+              </svg>
+              <span>Facebook</span>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M18.9 7.15c.01.2.01.4.01.61 0 6.2-4.72 13.35-13.35 13.35A13.3 13.3 0 0 1 2 20.06a9.45 9.45 0 0 0 6.92-1.94 4.69 4.69 0 0 1-4.38-3.25c.3.05.6.08.92.08.44 0 .87-.06 1.28-.17a4.68 4.68 0 0 1-3.75-4.59v-.06c.63.35 1.35.57 2.12.6a4.68 4.68 0 0 1-1.45-6.24A13.28 13.28 0 0 0 13.3 8.7a4.68 4.68 0 0 1 7.97-4.27 9.3 9.3 0 0 0 2.97-1.14 4.67 4.67 0 0 1-2.05 2.58A9.37 9.37 0 0 0 24 5.1a10.07 10.07 0 0 1-2.7 2.05 4.5 4.5 0 0 0-2.4 0Z" />
+              </svg>
+              <span>Twitter</span>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6.94 8.5H3.56V20h3.38V8.5Zm.22-3.55a1.95 1.95 0 1 0-3.9 0 1.95 1.95 0 0 0 3.9 0ZM20 13.1c0-3.32-1.77-4.86-4.14-4.86-1.9 0-2.75 1.04-3.22 1.77V8.5H9.26V20h3.38v-6.4c0-1.68.32-3.3 2.4-3.3 2.06 0 2.08 1.92 2.08 3.41V20H20v-6.9Z" />
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container footer-gallery" aria-label="Footer gallery">
+        <img src="images/gallery/ceo.jpg" alt="Mwanyi Terimba CEO portrait" loading="lazy" decoding="async" />
+        <img src="images/gallery/coffeebeans2.webp" alt="Coffee served" loading="lazy" decoding="async" />
+        <img src="images/gallery/coffeebeans.webp" alt="Coffee beans" loading="lazy" decoding="async" />
+        <img src="images/gallery/coffee-hero-02-300x200.webp" alt="Coffee garden" loading="lazy" decoding="async" />
+        <img src="images/gallery/kawampologoma.jpg" alt="Kaawa Mpologoma packet" loading="lazy" decoding="async" />
+        <img src="images/gallery/kawampologomasacket.webp" alt="Coffee pack" loading="lazy" decoding="async" />
+      </div>
+
+      <div class="container footer-bottom">
+        <p>&copy; <span id="current-year">2026</span> Mwanyi Terimba Ltd</p>
+        <p class="footer-powered">Powered By OBasil</p>
+      </div>
+    </footer>
+
+    <a
+      class="whatsapp-button"
+      href="https://wa.me/256742785066"
+      target="_blank"
+      rel="noreferrer"
+      aria-label="Chat with Mwanyi Terimba Ltd on WhatsApp"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M20 12a8 8 0 0 1-11.76 7.05L4 20l1.05-4.24A8 8 0 1 1 20 12Zm-4.23 2.23c-.2-.1-1.16-.57-1.34-.63-.18-.07-.31-.1-.44.1-.13.19-.51.63-.62.76-.11.13-.23.15-.43.05-.2-.1-.84-.31-1.6-.99-.59-.52-.99-1.16-1.11-1.35-.11-.2-.01-.3.08-.4.09-.09.2-.23.29-.34.1-.11.13-.19.2-.32.07-.13.03-.24-.02-.34-.05-.1-.44-1.06-.6-1.46-.16-.37-.32-.32-.44-.33h-.38c-.13 0-.34.05-.52.24-.18.2-.68.67-.68 1.63s.7 1.89.8 2.02c.1.13 1.37 2.08 3.32 2.92.47.2.84.32 1.13.42.47.15.89.13 1.22.08.37-.06 1.16-.47 1.33-.92.16-.46.16-.84.11-.92-.04-.08-.18-.13-.37-.23Z"
+        />
+      </svg>
+      <span>WhatsApp</span>
+    </a>
+  </body>
+</html>
