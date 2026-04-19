@@ -1423,32 +1423,86 @@ p {
 }
 
 .team-card {
+  display: grid;
+  padding: 0;
+  overflow: hidden;
   text-align: center;
 }
 
-.avatar-badge {
-  width: 4.8rem;
-  height: 4.8rem;
-  display: grid;
+.team-photo {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: linear-gradient(160deg, rgba(63, 34, 22, 0.98), rgba(44, 24, 15, 0.86));
+}
+
+.team-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center 18%;
+}
+
+.team-photo::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 45%;
+  background: linear-gradient(180deg, transparent 0%, rgba(17, 10, 6, 0.5) 100%);
+  pointer-events: none;
+}
+
+.team-photo--placeholder {
+  background:
+    radial-gradient(circle at top, rgba(235, 199, 123, 0.2), transparent 48%),
+    linear-gradient(160deg, rgba(63, 34, 22, 0.98), rgba(44, 24, 15, 0.86));
+}
+
+.team-photo--placeholder img {
+  object-fit: contain;
+  object-position: center;
+  padding: 1.3rem;
+  opacity: 0.9;
+}
+
+.team-photo-badge {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  min-width: 3rem;
+  height: 3rem;
+  display: inline-grid;
   place-items: center;
-  margin: 0 auto 1rem;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--gold) 0%, #d8a85a 100%);
-  color: #fff7ee;
+  padding-inline: 0.85rem;
+  border-radius: 999px;
+  background: rgba(255, 247, 236, 0.9);
+  color: var(--primary-deep);
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 1.7rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  box-shadow: 0 16px 28px rgba(188, 142, 61, 0.22);
+  box-shadow: 0 14px 24px rgba(19, 11, 7, 0.18);
+  z-index: 1;
+}
+
+.team-card-body {
+  display: grid;
+  gap: 0.2rem;
+  padding: 1.35rem 1.4rem 1.45rem;
 }
 
 .team-card small {
   display: block;
-  margin-top: 0.45rem;
+  margin-top: 0.35rem;
   color: var(--gold);
   font-size: 0.82rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   font-weight: 800;
+}
+
+.team-card-body p {
+  margin-top: 0.55rem;
 }
 
 .impact-copy {
@@ -1908,11 +1962,14 @@ p {
   .support-card,
   .info-card,
   .mission-card,
-  .team-card,
   .table-panel,
   .story-card,
   .product-content,
   .blog-content {
+    padding: 1.15rem;
+  }
+
+  .team-card-body {
     padding: 1.15rem;
   }
 
