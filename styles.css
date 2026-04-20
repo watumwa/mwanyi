@@ -935,10 +935,12 @@ p {
 .social-links a {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.55rem;
   padding: 0.7rem 0.95rem;
   border-radius: 999px;
   background: rgba(255, 250, 244, 0.08);
+  font-weight: 700;
 }
 
 .social-links svg {
@@ -1280,11 +1282,13 @@ p {
 .brand-socials a {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   padding: 0.68rem 0.95rem;
   border-radius: 999px;
   background: rgba(255, 250, 244, 0.1);
   border: 1px solid rgba(255, 246, 238, 0.12);
+  font-weight: 700;
 }
 
 .brand-socials svg {
@@ -1652,6 +1656,11 @@ p {
   border: 1px solid rgba(255, 246, 238, 0.1);
 }
 
+.tweet-stream article strong {
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
 .tweet-stream p {
   color: rgba(255, 243, 232, 0.82);
 }
@@ -1664,6 +1673,23 @@ p {
 
 .community-card p {
   color: var(--text-soft);
+}
+
+.community-notes {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.community-notes p {
+  margin: 0;
+  padding: 0.95rem 1rem;
+  border-radius: 1.1rem;
+  background: rgba(95, 52, 31, 0.06);
+  border: 1px solid rgba(77, 45, 28, 0.08);
+}
+
+.community-notes strong {
+  color: var(--primary-deep);
 }
 
 .blog-preview-footer {
